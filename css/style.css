@@ -1,0 +1,12 @@
+.container {
+  padding:2.5%
+}
+.title{
+  padding:25px 0px;
+}
+.tableHeader{
+  padding-top:25px !important;
+}
+tbody > tr:nth-child(odd) {
+  background-color:#f6f6f6;
+}

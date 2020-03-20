@@ -1,7 +1,8 @@
 class App {
-  constructor(parentChildName) {
+  constructor(gradeTable) {
     this.handleGetGradesSuccess = this.handleGetGradesSuccess.bind(this);
     this.handleGetGradesError = this.handleGetGradesError.bind(this);
+    this.gradeTable = gradeTable;
   }
   getGrades(){
     $.ajax({
@@ -16,7 +17,7 @@ class App {
     console.error(error);
   }
   handleGetGradesSuccess(grades){
-    console.log(grades)
+    this.gradeTable.updateGrades(grades)
   }
   start(){
     this.getGrades();
