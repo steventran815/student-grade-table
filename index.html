@@ -4,31 +4,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.css" crossorigin="anonymous">
   <title>Student Grade Table</title>
 </head>
 <body>
-  <div class="container">
+  <div class="mainContainer">
     <header>
-      <h1 class="title">Student Grade Table</h1>
+      <div class="row">
+        <div class="col">
+          <h1 class="title">Student Grade Table</h1>
+        </div>
+        <div class="col">
+          <h2 class="averageGrade">Average Grade: <span class="badge badge-secondary" id="averageGrade"></span></h2>
+        </div>
+      </div>
     </header>
     <main>
-      <table class="table">
-        <thead class="studentGradeTable">
-          <tr>
-            <th class="tableHeader" scope="col">Name</th>
-            <th class="tableHeader" scope="col">Course</th>
-            <th class="tableHeader" scope="col">Grade</th>
-          </tr>
-        </thead>
-        <tbody id ="mainTable">
-        </tbody>
-      </table>
+      <div class="row">
+        <div class="col-8">
+          <table class="table">
+            <thead class="studentGradeTable">
+              <tr>
+                <th class="tableHeader" scope="col">Name</th>
+                <th class="tableHeader" scope="col">Course</th>
+                <th class="tableHeader" scope="col">Grade</th>
+              </tr>
+            </thead>
+            <tbody id="mainTable">
+            </tbody>
+          </table>
+        </div>
+        <div class="col-4">
+          <form>
+            <h3>Add Grade</h3>
+            <input id="studentNameInput" placeholder="Student Name">
+            <input id="studentCourseInput" placeholder="Student Course">
+            <input id="studentGradeInput" placeholder="Student Grade">
+            <button class="addButton">Add</button>
+            <button class="cancelButton">Cancel</button>
+          </form>
+        </div>
+      </div>
     </main>
   </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
-<script src="components/app.js"></script>
-<script src="components/grade-table.js"></script>
-<script src="main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+  <script src="components/app.js"></script>
+  <script src="components/grade-table.js"></script>
+  <script src="components/page-header.js"></script>
+  <script src="main.js"></script>
 </body>
+
 </html>
