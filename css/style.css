@@ -19,20 +19,27 @@ tbody > tr:nth-child(odd) {
   width:100%;
   margin-bottom:15px !important;
   border-radius:5px;
-  border: 1px solid #ccd0d4;
-  /* height:35px; */
+  border-style:none;
 }
-
 .iconAndBackground{
   color:#4c4c4c;
-  background-color: #D4D5D8;
+  background-color: #E9ECEF;
   border-radius:3px 0px 0px 3px;
   display:flex;
+  border-left:1px solid #ccd0d4;
+  border-top:1px solid #ccd0d4;
+  border-bottom:1px solid #ccd0d4;
+  border-right:none;
   justify-content:center;
   align-items:center;
   padding:0px 10px;
 }
-
+#cancelButton{
+  margin-left:5px;
+}
 .fa-graduation-cap{
   width:16px;
+}
+.fa-user{
+  width:17px;
 }
