@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
-  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.css" crossorigin="anonymous">
   <title>Student Grade Table</title>
 </head>
@@ -38,11 +38,27 @@
         <div class="col-4">
           <form>
             <h3>Add Grade</h3>
-            <input id="studentNameInput" placeholder="Student Name">
-            <input id="studentCourseInput" placeholder="Student Course">
-            <input id="studentGradeInput" placeholder="Student Grade">
-            <button class="addButton">Add</button>
-            <button class="cancelButton">Cancel</button>
+            <div class="form-group"></div>
+            <div class="input-group">
+              <div class="input-group-addon iconAndBackground">
+                <i class="fa fa-user formIcon"></i>
+              </div><input type="text" class="form-control" name="name" id="studentNameInput" placeholder="Student Name">
+            </div>
+
+            <div class="input-group">
+              <div class="input-group-addon iconAndBackground">
+                <i class="fa fa-list-alt formIcon"></i>
+              </div><input type="text" class="form-control" name="name" id="studentCourseInput" placeholder="Student Course">
+            </div>
+
+            <div class="input-group">
+              <div class="input-group-addon iconAndBackground">
+                <i class="fa fa-graduation-cap formIcon"></i>
+              </div><input type="text" class="form-control" name="name" id="studentGradeInput" placeholder="Student Grade">
+            </div>
+            <button type="submit" name="add" id="addButton" class="btn btn-success">Add</button>
+
+            <button type="reset" name="cancel" id="cancelButton" class="btn btn-outline-secondary">Cancel</button>
           </form>
         </div>
       </div>
