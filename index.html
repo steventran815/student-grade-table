@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.css" crossorigin="anonymous">
   <title>Student Grade Table</title>
 </head>
 <body>
-  <div class="container">
+  <div class="mainContainer">
     <header>
       <div class="row">
         <div class="col">
@@ -20,23 +21,57 @@
       </div>
     </header>
     <main>
-      <table class="table">
-        <thead class="studentGradeTable">
-          <tr>
-            <th class="tableHeader" scope="col">Name</th>
-            <th class="tableHeader" scope="col">Course</th>
-            <th class="tableHeader" scope="col">Grade</th>
-          </tr>
-        </thead>
-        <tbody id ="mainTable">
-        </tbody>
-      </table>
+      <div class="row">
+        <div class="col-md-8 col-sm-12">
+          <table class="table">
+            <thead class="studentGradeTable">
+              <tr>
+                <th class="tableHeader" scope="col">Name</th>
+                <th class="tableHeader" scope="col">Course</th>
+                <th class="tableHeader" scope="col">Grade</th>
+              </tr>
+            </thead>
+            <tbody id="mainTable">
+            </tbody>
+          </table>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <form id="studentGradeForm">
+            <h3>Add Grade</h3>
+            <div class="form-group"></div>
+            <div class="input-group">
+              <div class="input-group-addon iconAndBackground">
+                <i class="fa fa-user formIcon"></i>
+              </div><input type="text" class="form-control" name="name" id="studentNameInput" placeholder="Student Name">
+            </div>
+
+            <div class="input-group">
+              <div class="input-group-addon iconAndBackground">
+                <i class="fa fa-list-alt formIcon"></i>
+              </div><input type="text" class="form-control" name="course" id="studentCourseInput" placeholder="Student Course">
+            </div>
+
+            <div class="input-group">
+              <div class="input-group-addon iconAndBackground">
+                <i class="fa fa-graduation-cap formIcon"></i>
+              </div><input type="text" class="form-control" name="grade" id="studentGradeInput" placeholder="Student Grade">
+            </div>
+            <button type="submit" name="add" id="addButton" class="btn btn-success">Add</button>
+
+            <button type="reset" name="cancel" id="cancelButton" class="btn btn-outline-secondary">Cancel</button>
+          </form>
+        </div>
+      </div>
     </main>
   </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
-<script src="components/app.js"></script>
-<script src="components/grade-table.js"></script>
-<script src="components/page-header.js"></script>
-<script src="main.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+  <script src="components/app.js"></script>
+  <script src="components/grade-table.js"></script>
+  <script src="components/page-header.js"></script>
+  <script src="components/grade-form.js"></script>
+  <script src="main.js"></script>
+
 </body>
+
 </html>

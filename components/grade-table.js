@@ -1,13 +1,15 @@
 class GradeTable {
-  constructor(tableElement){
+  constructor(tableElement) {
     this.tableElement = tableElement
   }
   updateGrades(grades){
     console.log(grades)
 
-    var mainTable = document.getElementById("mainTable")
-    for (var i = 0; i < grades.length; i++) {
 
+    var mainTable = document.getElementById("mainTable")
+    $("#mainTable").empty();
+    for (var i = 0; i < grades.length; i++) {
+      // mainTable = document.createElement("tbody");
       var tableRow = document.createElement("tr");
       var name = document.createElement("td")
       name.textContent = grades[i].name;
