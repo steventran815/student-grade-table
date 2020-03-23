@@ -2,7 +2,10 @@ class GradeTable {
   constructor(tableElement) {
     this.tableElement = tableElement
   }
-  updateGrades(grades) {
+  updateGrades(grades){
+    console.log(grades)
+
+
     var mainTable = document.getElementById("mainTable")
     $("#mainTable").empty();
     for (var i = 0; i < grades.length; i++) {
