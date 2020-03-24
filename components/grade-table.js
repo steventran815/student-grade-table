@@ -5,9 +5,16 @@ class GradeTable {
   }
   updateGrades(data){
     console.log(data)
-    // if(mainTable === ){
 
-    // }
+    var noGrades = document.getElementById("noGradesRecorded");
+
+    if (!data[0]) {
+      noGrades.className ="d-inline"
+    } else if (data[0]) {
+      noGrades.className = "d-none"
+    }
+
+
     var mainTable = document.getElementById("mainTable")
     $("#mainTable").empty();
     for (var i = 0; i < data.length; i++) {
