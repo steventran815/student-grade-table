@@ -3,6 +3,8 @@
 }
 .title{
   padding-bottom:25px;
+  font-size:30px;
+  text-align:left;
 }
 .tableHeader{
   padding-top:25px !important;
@@ -13,7 +15,9 @@ tbody > tr:nth-child(odd) {
 }
 .averageGrade{
   float:right;
-  padding:25px 0px;
+  padding:0px 0px;
+  font-size:25px;
+  text-align:right;
 }
 .input-group{
   width:100%;
@@ -42,4 +46,25 @@ tbody > tr:nth-child(odd) {
 }
 .fa-user{
   width:17px;
+}
+
+
+
+@media only screen
+  and (max-device-width: 900px)
+   {
+    .title{
+      font-size:30px;
+      padding-top:20px;
+      padding-bottom:5px;
+      text-align:center;
+    }
+    .averageGrade{
+      font-size:20px;
+      padding-top:0px;
+      padding-bottom:5px;
+      text-align:center;
+      float:none;
+
+    }
 }
